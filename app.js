@@ -26,7 +26,7 @@ let promiseFunctionError = () => {
 // 否則，不透過 try-catch 是沒辦法抓到 Promise 裡面的 error
 let asyncFunctionError = () => {
     return new Promise((res, rej) => {
-        http.get('http://www.google.com', (res) => {
+        http.get('http://www.google.com', (response) => {
             try {
                 throw 'SetTimeout Error with try catch'
             } catch(e) {
